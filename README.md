@@ -6,7 +6,7 @@ Simple API REST to process image from url and scan for car plates using openalpr
 
 ## Description
 
-EyesEgger is just a micro service covering IPv6 port scan functionality over an API/JSON interface.
+ALPRservice is just a micro service covering openalpr scan over an API/JSON interface.
 
 ### Installation
 
