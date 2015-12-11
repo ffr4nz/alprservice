@@ -53,10 +53,20 @@ def scan_plate(topn,country,url):
 		cmd_alpr = "alpr -c "+country+" -n "+topn+" -j "+file_path
 		launch = subprocess.Popen(cmd_alpr, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
 		output,err = launch.communicate()
-                response = json.loads(output)
+		response = json.loads(output)
+                if len(response["results"]) > 0:
+                        result = response["results"][0]
+                        del response["results"]
+                        response["results"] = result
+                        response["plate"] = response["results"]["plate"]
+                        response["confidence"] = response["results"]["confidence"]
+		else:
+			response["plate"] = ""
+			response["confidence"]
 	except Exception as err:
                 print('Error! ',err)
-		insert_data['status'] = "error"
+		response['status'] = "error"
+		response['error_detail'] = err
 	try:
 		os.remove(file_path)
 	except Exception as e:
