@@ -2,7 +2,7 @@
 
 Simple API REST to process image from url and scan for car plates using openalpr
 
-> A port scan or portscan can be defined as a process that sends client requests to a range of server port addresses on a host, with the goal of finding an active port. While not a nefarious process in and of itself, it is one used by hackers to probe target machine services with the aim of exploiting a known vulnerability of that service,[1] however the majority of uses of a port scan are not attacks and are simple probes to determine services available on a remote machine.
+> OpenALPR is an open source Automatic License Plate Recognition library written in C++ with bindings in C#, Java, Node.js, and Python. The library analyzes images and video streams to identify license plates. The output is the text representation of any license plate characters.
 
 ## Description
 
