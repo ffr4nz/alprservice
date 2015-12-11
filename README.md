@@ -93,7 +93,7 @@ sudo ln /dev/null /dev/raw1394
 Get last version from Github repo:
 
 ```sh
-$ git clone https://github.com/ffr4nz/eyesegger.git
+$ git clone https://github.com/ffr4nz/alprservice.git
 ```
 
 You need some requeriment installed:
@@ -105,7 +105,7 @@ $ pip install -r requirements.txt
 After pip install all libraries service can start using:
 
 ```sh
-$ python sixcansrv.py -p 4343
+$ python alprservice.py -p 4343
 ```
 Consume API service using */plate/* endpoint
 
