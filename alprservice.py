@@ -62,7 +62,7 @@ def scan_plate(topn,country,url):
                         response["confidence"] = response["results"]["confidence"]
 		else:
 			response["plate"] = ""
-			response["confidence"]
+			response["confidence"] = ""
 	except Exception as err:
                 print('Error! ',err)
 		response['status'] = "error"
